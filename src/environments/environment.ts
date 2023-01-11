@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  // BASE_URL: 'https://app-reviews-server-production.up.railway.app',
-  BASE_URL: 'http://localhost:4000',
+   BASE_URL: 'https://tic-tac-toe-server-production-7d91.up.railway.app',
 };
 
 /*
