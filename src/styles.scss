@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    transition: all 1s ease-in-out;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.mat-typography,
+.mat-mdc-select {
+    font: 400 14px/18px Montserrat, "Montserrat", sans-serif;
+    margin: 0;
+}
+
+.mdc-button {
+    font: 500 14px/28px Montserrat, "Montserrat", sans-serif;
+}
+
+.mat-typography h2, .mat-typography p, .mat-typography h3 {
+    margin: 0;
+}
+
+@media(max-width: 800px) {
+    .table {
+        overflow-x: auto !important;
+    }
+
+    .mat-table {
+        min-width: 800px;
+    }
+}

@@ -1,0 +1,29 @@
+<div class="container" *ngIf="!chatService.joined; else block">
+    <div class="register-modal">
+        <form class="example-form form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <h2>LOGIN</h2>
+            <div class="form__container">
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Enter your name</mat-label>
+                    <input matInput class="form__input" type="email" formControlName='login' autocomplete="new-email">
+                </mat-form-field>
+
+            </div>
+            <button mat-button type="submit" class=" form__button" [disabled]="formGroup.invalid">LOGIN</button>
+        </form>
+    </div>
+</div>
+
+
+<ng-template #block>
+    <h1 *ngIf="chatService.secondPlayer">{{chatService.secondPlayer}} second player</h1>
+    <h1 *ngIf="!gameService.winner">{{gameService.activePlayer}} turn</h1>
+    <h1 *ngIf="gameService.winner">{{gameService.activePlayer}} won</h1>
+    <button *ngIf="gameService.gameOver" mat-button class=" form__button" (click)="resetGame()">RESET</button>
+    <div class="board-container">
+    <div class="square-container" *ngFor="let square of gameService.board">
+      <app-square [square]="square"></app-square>  
+    </div>
+</div>
+</ng-template>

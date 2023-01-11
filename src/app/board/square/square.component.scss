@@ -1,0 +1,21 @@
+:host {
+    flex: 1 1 auto;
+}
+
+.game-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    line-height: 1;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    display: inline;
+    margin: 0;
+    font-size: 20px;
+    overflow: hidden;
+}
